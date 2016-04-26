@@ -1,5 +1,11 @@
-<ion-view view-title="About">
-  <ion-content>
-  	<about-view></about-view>
-  </ion-content>
+<ion-view title="About">
+	<ion-nav-bar class="bar-stable">
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+	<ion-content has-header="true" padding="true">
+		<about-view></about-view>
+	</ion-content>
 </ion-view>

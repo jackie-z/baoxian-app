@@ -1,5 +1,5 @@
 
-let newFactory = function ($resource) {
+let studyFactory = function ($resource) {
   
   let resources = {};
 
@@ -7,4 +7,4 @@ let newFactory = function ($resource) {
 };
 
 
-export default ['$resource', newFactory];
+export default ['$resource', studyFactory];

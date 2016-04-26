@@ -1,15 +1,18 @@
 <ion-view title="学习">
-	<ion-nav-buttons side="left">
-		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-	</ion-nav-buttons>
+	<ion-nav-bar class="bar-stable">
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
 	<ion-content has-header="true" padding="true">
-		<new-view></new-view>
+		<study-view></study-view>
 	</ion-content>
 	<div class="tabs tabs-icon-only">
 		<a nav-clear class="tab-item disable-user-behavior active" title="Home" nav-clear ui-sref="app.home">
 			<i class="icon ion-home"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
 		</a>
-		<a nav-clear class="tab-item disable-user-behavior" title="Chat" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline" ui-sref="app.new">
+		<a nav-clear class="tab-item disable-user-behavior" title="Chat" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline" ui-sref="app.study">
 			<i class="icon ion-chatbubbles"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
 		</a>		
 	</div>
