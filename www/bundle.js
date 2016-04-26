@@ -99782,11 +99782,31 @@
 	
 	var _menuMenu2 = _interopRequireDefault(_menuMenu);
 	
-	var _newNew = __webpack_require__(21);
+	var _studyStudy = __webpack_require__(21);
 	
-	var _newNew2 = _interopRequireDefault(_newNew);
+	var _studyStudy2 = _interopRequireDefault(_studyStudy);
 	
-	var componentModule = _angular2['default'].module('app.components', [_menuMenu2['default'].name, _homeHome2['default'].name, _aboutAbout2['default'].name, _newNew2['default'].name]);
+	var _indexIndex = __webpack_require__(26);
+	
+	var _indexIndex2 = _interopRequireDefault(_indexIndex);
+	
+	var _prospectProspect = __webpack_require__(31);
+	
+	var _prospectProspect2 = _interopRequireDefault(_prospectProspect);
+	
+	var _messageMessage = __webpack_require__(36);
+	
+	var _messageMessage2 = _interopRequireDefault(_messageMessage);
+	
+	var _profitProfit = __webpack_require__(41);
+	
+	var _profitProfit2 = _interopRequireDefault(_profitProfit);
+	
+	var _settingSetting = __webpack_require__(46);
+	
+	var _settingSetting2 = _interopRequireDefault(_settingSetting);
+	
+	var componentModule = _angular2['default'].module('app.components', [_menuMenu2['default'].name, _homeHome2['default'].name, _aboutAbout2['default'].name, _studyStudy2['default'].name, _indexIndex2['default'].name, _prospectProspect2['default'].name, _messageMessage2['default'].name, _profitProfit2['default'].name, _settingSetting2['default'].name]);
 	
 	exports['default'] = componentModule;
 	module.exports = exports['default'];
@@ -100663,7 +100683,7 @@
 /* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "<div style=\"background-color:red\">{{ vm.name }}</div>\r\n<div class=\"card\">\r\n\t<div class=\"item item-divider\">\r\n\t\tI'm a Header in a Card!\r\n\t</div>\r\n\t<div class=\"item item-text-wrap\">\r\n\t\tThis is a basic Card with some text.\r\n\t</div>\r\n\t<div class=\"item item-divider\">\r\n\t\tI'm a Footer in a Card!\r\n\t</div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n\t<div class=\"col\" >.col</div>\r\n\t<div class=\"col\">.col</div>\r\n</div>\r\n<div class=\"row\">\r\n\t<div class=\"col\">.col</div>\r\n\t<div class=\"col\">.col</div>\r\n</div>"
+	module.exports = "<div style=\"background-color:red\">{{ vm.name }}</div>\r\n<div class=\"card\">\r\n\t<div class=\"item item-divider\">\r\n\t\tI'm a Header in a Card!\r\n\t</div>\r\n\t<div class=\"item item-text-wrap\">\r\n\t\tThis is a basic Card with some text.\r\n\t</div>\r\n\t<div class=\"item item-divider\">\r\n\t\tI'm a Footer in a Card!\r\n\t</div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.index\" style=\"text-decoration: none\">              \r\n\t\t\t我的主页\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.prospect\" style=\"text-decoration: none\">          \r\n\t\t\t展业\r\n\t\t</a>\r\n\t</div>\r\n</div>\r\n<div class=\"row\">\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.message\" style=\"text-decoration: none\">\r\n\t\t\t消息\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.profit\" style=\"text-decoration: none\"> \r\n\t\t\t赚钱\r\n\t\t</a>\r\n\t</div>\r\n</div>"
 
 /***/ },
 /* 11 */
@@ -100991,32 +101011,32 @@
 	
 	var _angularResource2 = _interopRequireDefault(_angularResource);
 	
-	var _newComponent = __webpack_require__(22);
+	var _studyComponent = __webpack_require__(22);
 	
-	var _newComponent2 = _interopRequireDefault(_newComponent);
+	var _studyComponent2 = _interopRequireDefault(_studyComponent);
 	
-	var _newFactory = __webpack_require__(25);
+	var _studyFactory = __webpack_require__(25);
 	
-	var _newFactory2 = _interopRequireDefault(_newFactory);
+	var _studyFactory2 = _interopRequireDefault(_studyFactory);
 	
 	var _config = __webpack_require__(13);
 	
 	var _config2 = _interopRequireDefault(_config);
 	
-	var newModule = _angular2['default'].module('new', [_angularUiRouter2['default'], _angularResource2['default']]).config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+	var studyModule = _angular2['default'].module('study', [_angularUiRouter2['default'], _angularResource2['default']]).config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
 	  "ngInject";
 	
-	  $stateProvider.state('app.new', {
-	    url: '/new',
+	  $stateProvider.state('app.study', {
+	    url: '/study',
 	    views: {
 	      'menuContent': {
-	        templateUrl: _config2['default'].pathHtml + 'new/new.html'
+	        templateUrl: _config2['default'].pathHtml + 'study/study.html'
 	      }
 	    }
 	  });
-	}]).directive('newView', _newComponent2['default']).factory('new.factory', _newFactory2['default']);
+	}]).directive('studyView', _studyComponent2['default']).factory('study.factory', _studyFactory2['default']);
 	
-	exports['default'] = newModule;
+	exports['default'] = studyModule;
 	module.exports = exports['default'];
 
 /***/ },
@@ -101031,26 +101051,26 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _newComponentHtml = __webpack_require__(23);
+	var _studyComponentHtml = __webpack_require__(23);
 	
-	var _newComponentHtml2 = _interopRequireDefault(_newComponentHtml);
+	var _studyComponentHtml2 = _interopRequireDefault(_studyComponentHtml);
 	
-	var _newController = __webpack_require__(24);
+	var _studyController = __webpack_require__(24);
 	
-	var _newController2 = _interopRequireDefault(_newController);
+	var _studyController2 = _interopRequireDefault(_studyController);
 	
-	var newComponent = function newComponent() {
+	var studyComponent = function studyComponent() {
 	  return {
 	    restrict: 'E',
 	    scope: {},
-	    template: _newComponentHtml2['default'],
-	    controller: _newController2['default'],
+	    template: _studyComponentHtml2['default'],
+	    controller: _studyController2['default'],
 	    controllerAs: 'vm',
 	    bindToController: true
 	  };
 	};
 	
-	exports['default'] = newComponent;
+	exports['default'] = studyComponent;
 	module.exports = exports['default'];
 
 /***/ },
@@ -101073,25 +101093,25 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var NewController = (function () {
-	  function NewController(factory) {
-	    _classCallCheck(this, NewController);
+	var StudyController = (function () {
+	  function StudyController(factory) {
+	    _classCallCheck(this, StudyController);
 	
-	    this.name = 'new';
+	    this.name = 'study';
 	    this.init();
 	  }
 	
-	  _createClass(NewController, [{
+	  _createClass(StudyController, [{
 	    key: 'init',
 	    value: function init() {
 	      //code
 	    }
 	  }]);
 	
-	  return NewController;
+	  return StudyController;
 	})();
 	
-	exports['default'] = ['new.factory', NewController];
+	exports['default'] = ['study.factory', StudyController];
 	module.exports = exports['default'];
 
 /***/ },
@@ -101104,14 +101124,754 @@
 	  value: true
 	});
 	
-	var newFactory = function newFactory($resource) {
+	var studyFactory = function studyFactory($resource) {
 	
 	  var resources = {};
 	
 	  return $resource('http://pathurl/:url/:id', {}, resources);
 	};
 	
-	exports['default'] = ['$resource', newFactory];
+	exports['default'] = ['$resource', studyFactory];
+	module.exports = exports['default'];
+
+/***/ },
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _angular = __webpack_require__(1);
+	
+	var _angular2 = _interopRequireDefault(_angular);
+	
+	var _angularUiRouter = __webpack_require__(3);
+	
+	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
+	
+	var _angularResource = __webpack_require__(7);
+	
+	var _angularResource2 = _interopRequireDefault(_angularResource);
+	
+	var _indexComponent = __webpack_require__(27);
+	
+	var _indexComponent2 = _interopRequireDefault(_indexComponent);
+	
+	var _indexFactory = __webpack_require__(30);
+	
+	var _indexFactory2 = _interopRequireDefault(_indexFactory);
+	
+	var _config = __webpack_require__(13);
+	
+	var _config2 = _interopRequireDefault(_config);
+	
+	var indexModule = _angular2['default'].module('index', [_angularUiRouter2['default'], _angularResource2['default']]).config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+	  "ngInject";
+	
+	  $stateProvider.state('app.index', {
+	    url: '/index',
+	    views: {
+	      'menuContent': {
+	        templateUrl: _config2['default'].pathHtml + 'index/index.html'
+	      }
+	    }
+	  });
+	}]).directive('indexView', _indexComponent2['default']).factory('index.factory', _indexFactory2['default']);
+	
+	exports['default'] = indexModule;
+	module.exports = exports['default'];
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _indexComponentHtml = __webpack_require__(28);
+	
+	var _indexComponentHtml2 = _interopRequireDefault(_indexComponentHtml);
+	
+	var _indexController = __webpack_require__(29);
+	
+	var _indexController2 = _interopRequireDefault(_indexController);
+	
+	var indexComponent = function indexComponent() {
+	  return {
+	    restrict: 'E',
+	    scope: {},
+	    template: _indexComponentHtml2['default'],
+	    controller: _indexController2['default'],
+	    controllerAs: 'vm',
+	    bindToController: true
+	  };
+	};
+	
+	exports['default'] = indexComponent;
+	module.exports = exports['default'];
+
+/***/ },
+/* 28 */
+/***/ function(module, exports) {
+
+	module.exports = "<div>{{ vm.name }}</div>"
+
+/***/ },
+/* 29 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	var IndexController = (function () {
+	  function IndexController(factory) {
+	    _classCallCheck(this, IndexController);
+	
+	    this.name = 'index';
+	    this.test = 'mytest';
+	    this.init();
+	  }
+	
+	  _createClass(IndexController, [{
+	    key: 'init',
+	    value: function init() {
+	      //code
+	    }
+	  }]);
+	
+	  return IndexController;
+	})();
+	
+	exports['default'] = ['index.factory', IndexController];
+	module.exports = exports['default'];
+
+/***/ },
+/* 30 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var indexFactory = function indexFactory($resource) {
+	
+	  var resources = {};
+	
+	  return $resource('https://secret-oasis-5061.herokuapp.com/api/Usuario/:url/:id', {}, resources);
+	};
+	
+	exports['default'] = ['$resource', indexFactory];
+	module.exports = exports['default'];
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _angular = __webpack_require__(1);
+	
+	var _angular2 = _interopRequireDefault(_angular);
+	
+	var _angularUiRouter = __webpack_require__(3);
+	
+	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
+	
+	var _angularResource = __webpack_require__(7);
+	
+	var _angularResource2 = _interopRequireDefault(_angularResource);
+	
+	var _prospectComponent = __webpack_require__(32);
+	
+	var _prospectComponent2 = _interopRequireDefault(_prospectComponent);
+	
+	var _prospectFactory = __webpack_require__(35);
+	
+	var _prospectFactory2 = _interopRequireDefault(_prospectFactory);
+	
+	var _config = __webpack_require__(13);
+	
+	var _config2 = _interopRequireDefault(_config);
+	
+	var prospectModule = _angular2['default'].module('prospect', [_angularUiRouter2['default'], _angularResource2['default']]).config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+	  "ngInject";
+	
+	  $stateProvider.state('app.prospect', {
+	    url: '/prospect',
+	    views: {
+	      'menuContent': {
+	        templateUrl: _config2['default'].pathHtml + 'prospect/prospect.html'
+	      }
+	    }
+	  });
+	}]).directive('prospectView', _prospectComponent2['default']).factory('prospect.factory', _prospectFactory2['default']);
+	
+	exports['default'] = prospectModule;
+	module.exports = exports['default'];
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _prospectComponentHtml = __webpack_require__(33);
+	
+	var _prospectComponentHtml2 = _interopRequireDefault(_prospectComponentHtml);
+	
+	var _prospectController = __webpack_require__(34);
+	
+	var _prospectController2 = _interopRequireDefault(_prospectController);
+	
+	var prospectComponent = function prospectComponent() {
+	  return {
+	    restrict: 'E',
+	    scope: {},
+	    template: _prospectComponentHtml2['default'],
+	    controller: _prospectController2['default'],
+	    controllerAs: 'vm',
+	    bindToController: true
+	  };
+	};
+	
+	exports['default'] = prospectComponent;
+	module.exports = exports['default'];
+
+/***/ },
+/* 33 */
+/***/ function(module, exports) {
+
+	module.exports = "<div>{{ vm.name }}</div>"
+
+/***/ },
+/* 34 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	var ProspectController = (function () {
+	  function ProspectController(factory) {
+	    _classCallCheck(this, ProspectController);
+	
+	    this.name = 'prospect';
+	    this.test = 'mytest';
+	    this.init();
+	  }
+	
+	  _createClass(ProspectController, [{
+	    key: 'init',
+	    value: function init() {
+	      //code
+	    }
+	  }]);
+	
+	  return ProspectController;
+	})();
+	
+	exports['default'] = ['prospect.factory', ProspectController];
+	module.exports = exports['default'];
+
+/***/ },
+/* 35 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var prospectFactory = function prospectFactory($resource) {
+	
+	  var resources = {};
+	
+	  return $resource('https://secret-oasis-5061.herokuapp.com/api/Usuario/:url/:id', {}, resources);
+	};
+	
+	exports['default'] = ['$resource', prospectFactory];
+	module.exports = exports['default'];
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _angular = __webpack_require__(1);
+	
+	var _angular2 = _interopRequireDefault(_angular);
+	
+	var _angularUiRouter = __webpack_require__(3);
+	
+	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
+	
+	var _angularResource = __webpack_require__(7);
+	
+	var _angularResource2 = _interopRequireDefault(_angularResource);
+	
+	var _messageComponent = __webpack_require__(37);
+	
+	var _messageComponent2 = _interopRequireDefault(_messageComponent);
+	
+	var _messageFactory = __webpack_require__(40);
+	
+	var _messageFactory2 = _interopRequireDefault(_messageFactory);
+	
+	var _config = __webpack_require__(13);
+	
+	var _config2 = _interopRequireDefault(_config);
+	
+	var messageModule = _angular2['default'].module('message', [_angularUiRouter2['default'], _angularResource2['default']]).config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+	  "ngInject";
+	
+	  $stateProvider.state('app.message', {
+	    url: '/message',
+	    views: {
+	      'menuContent': {
+	        templateUrl: _config2['default'].pathHtml + 'message/message.html'
+	      }
+	    }
+	  });
+	}]).directive('messageView', _messageComponent2['default']).factory('message.factory', _messageFactory2['default']);
+	
+	exports['default'] = messageModule;
+	module.exports = exports['default'];
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _messageComponentHtml = __webpack_require__(38);
+	
+	var _messageComponentHtml2 = _interopRequireDefault(_messageComponentHtml);
+	
+	var _messageController = __webpack_require__(39);
+	
+	var _messageController2 = _interopRequireDefault(_messageController);
+	
+	var messageComponent = function messageComponent() {
+	  return {
+	    restrict: 'E',
+	    scope: {},
+	    template: _messageComponentHtml2['default'],
+	    controller: _messageController2['default'],
+	    controllerAs: 'vm',
+	    bindToController: true
+	  };
+	};
+	
+	exports['default'] = messageComponent;
+	module.exports = exports['default'];
+
+/***/ },
+/* 38 */
+/***/ function(module, exports) {
+
+	module.exports = "<div>{{ vm.name }}</div>"
+
+/***/ },
+/* 39 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	var MessageController = (function () {
+	  function MessageController(factory) {
+	    _classCallCheck(this, MessageController);
+	
+	    this.name = 'message';
+	    this.test = 'mytest';
+	    this.init();
+	  }
+	
+	  _createClass(MessageController, [{
+	    key: 'init',
+	    value: function init() {
+	      //code
+	    }
+	  }]);
+	
+	  return MessageController;
+	})();
+	
+	exports['default'] = ['message.factory', MessageController];
+	module.exports = exports['default'];
+
+/***/ },
+/* 40 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var messageFactory = function messageFactory($resource) {
+	
+	  var resources = {};
+	
+	  return $resource('https://secret-oasis-5061.herokuapp.com/api/Usuario/:url/:id', {}, resources);
+	};
+	
+	exports['default'] = ['$resource', messageFactory];
+	module.exports = exports['default'];
+
+/***/ },
+/* 41 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _angular = __webpack_require__(1);
+	
+	var _angular2 = _interopRequireDefault(_angular);
+	
+	var _angularUiRouter = __webpack_require__(3);
+	
+	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
+	
+	var _angularResource = __webpack_require__(7);
+	
+	var _angularResource2 = _interopRequireDefault(_angularResource);
+	
+	var _profitComponent = __webpack_require__(42);
+	
+	var _profitComponent2 = _interopRequireDefault(_profitComponent);
+	
+	var _profitFactory = __webpack_require__(45);
+	
+	var _profitFactory2 = _interopRequireDefault(_profitFactory);
+	
+	var _config = __webpack_require__(13);
+	
+	var _config2 = _interopRequireDefault(_config);
+	
+	var profitModule = _angular2['default'].module('profit', [_angularUiRouter2['default'], _angularResource2['default']]).config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+	  "ngInject";
+	
+	  $stateProvider.state('app.profit', {
+	    url: '/profit',
+	    views: {
+	      'menuContent': {
+	        templateUrl: _config2['default'].pathHtml + 'profit/profit.html'
+	      }
+	    }
+	  });
+	}]).directive('profitView', _profitComponent2['default']).factory('profit.factory', _profitFactory2['default']);
+	
+	exports['default'] = profitModule;
+	module.exports = exports['default'];
+
+/***/ },
+/* 42 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _profitComponentHtml = __webpack_require__(43);
+	
+	var _profitComponentHtml2 = _interopRequireDefault(_profitComponentHtml);
+	
+	var _profitController = __webpack_require__(44);
+	
+	var _profitController2 = _interopRequireDefault(_profitController);
+	
+	var profitComponent = function profitComponent() {
+	  return {
+	    restrict: 'E',
+	    scope: {},
+	    template: _profitComponentHtml2['default'],
+	    controller: _profitController2['default'],
+	    controllerAs: 'vm',
+	    bindToController: true
+	  };
+	};
+	
+	exports['default'] = profitComponent;
+	module.exports = exports['default'];
+
+/***/ },
+/* 43 */
+/***/ function(module, exports) {
+
+	module.exports = "<div>{{ vm.name }}</div>"
+
+/***/ },
+/* 44 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	var ProfitController = (function () {
+	  function ProfitController(factory) {
+	    _classCallCheck(this, ProfitController);
+	
+	    this.name = 'profit';
+	    this.test = 'mytest';
+	    this.init();
+	  }
+	
+	  _createClass(ProfitController, [{
+	    key: 'init',
+	    value: function init() {
+	      //code
+	    }
+	  }]);
+	
+	  return ProfitController;
+	})();
+	
+	exports['default'] = ['profit.factory', ProfitController];
+	module.exports = exports['default'];
+
+/***/ },
+/* 45 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var profitFactory = function profitFactory($resource) {
+	
+	  var resources = {};
+	
+	  return $resource('https://secret-oasis-5061.herokuapp.com/api/Usuario/:url/:id', {}, resources);
+	};
+	
+	exports['default'] = ['$resource', profitFactory];
+	module.exports = exports['default'];
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _angular = __webpack_require__(1);
+	
+	var _angular2 = _interopRequireDefault(_angular);
+	
+	var _angularUiRouter = __webpack_require__(3);
+	
+	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
+	
+	var _angularResource = __webpack_require__(7);
+	
+	var _angularResource2 = _interopRequireDefault(_angularResource);
+	
+	var _settingComponent = __webpack_require__(47);
+	
+	var _settingComponent2 = _interopRequireDefault(_settingComponent);
+	
+	var _settingFactory = __webpack_require__(50);
+	
+	var _settingFactory2 = _interopRequireDefault(_settingFactory);
+	
+	var _config = __webpack_require__(13);
+	
+	var _config2 = _interopRequireDefault(_config);
+	
+	var settingModule = _angular2['default'].module('setting', [_angularUiRouter2['default'], _angularResource2['default']]).config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+	  "ngInject";
+	
+	  $stateProvider.state('app.setting', {
+	    url: '/setting',
+	    views: {
+	      'menuContent': {
+	        templateUrl: _config2['default'].pathHtml + 'setting/setting.html'
+	      }
+	    }
+	  });
+	}]).directive('settingView', _settingComponent2['default']).factory('setting.factory', _settingFactory2['default']);
+	
+	exports['default'] = settingModule;
+	module.exports = exports['default'];
+
+/***/ },
+/* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _settingComponentHtml = __webpack_require__(48);
+	
+	var _settingComponentHtml2 = _interopRequireDefault(_settingComponentHtml);
+	
+	var _settingController = __webpack_require__(49);
+	
+	var _settingController2 = _interopRequireDefault(_settingController);
+	
+	var settingComponent = function settingComponent() {
+	  return {
+	    restrict: 'E',
+	    scope: {},
+	    template: _settingComponentHtml2['default'],
+	    controller: _settingController2['default'],
+	    controllerAs: 'vm',
+	    bindToController: true
+	  };
+	};
+	
+	exports['default'] = settingComponent;
+	module.exports = exports['default'];
+
+/***/ },
+/* 48 */
+/***/ function(module, exports) {
+
+	module.exports = "<div>{{ vm.name }}</div>"
+
+/***/ },
+/* 49 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	var SettingController = (function () {
+	  function SettingController(factory) {
+	    _classCallCheck(this, SettingController);
+	
+	    this.name = 'setting';
+	    this.test = 'mytest';
+	    this.init();
+	  }
+	
+	  _createClass(SettingController, [{
+	    key: 'init',
+	    value: function init() {
+	      //code
+	    }
+	  }]);
+	
+	  return SettingController;
+	})();
+	
+	exports['default'] = ['setting.factory', SettingController];
+	module.exports = exports['default'];
+
+/***/ },
+/* 50 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var settingFactory = function settingFactory($resource) {
+	
+	  var resources = {};
+	
+	  return $resource('https://secret-oasis-5061.herokuapp.com/api/Usuario/:url/:id', {}, resources);
+	};
+	
+	exports['default'] = ['$resource', settingFactory];
 	module.exports = exports['default'];
 
 /***/ }
