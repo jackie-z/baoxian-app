@@ -99858,7 +99858,9 @@
 	      }
 	    }
 	  });
-	}]).directive('home', _homeComponent2['default']).factory('home.factory', _homeFactory2['default']);
+	}]).directive('home', function () {
+	  return new _homeComponent2['default']();
+	}).factory('home.factory', _homeFactory2['default']);
 	
 	exports['default'] = homeModule;
 	module.exports = exports['default'];
@@ -100655,7 +100657,11 @@
 	  value: true
 	});
 	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
 	var _homeComponentHtml = __webpack_require__(10);
 	
@@ -100665,25 +100671,47 @@
 	
 	var _homeController2 = _interopRequireDefault(_homeController);
 	
-	var homeComponent = function homeComponent() {
-	  return {
-	    restrict: 'E',
-	    scope: {},
-	    template: _homeComponentHtml2['default'],
-	    controller: _homeController2['default'],
-	    controllerAs: 'vm',
-	    bindToController: true
-	  };
-	};
+	var HomeComponent = (function () {
+	  function HomeComponent() {
+	    _classCallCheck(this, HomeComponent);
 	
-	exports['default'] = homeComponent;
+	    this.restrict = 'E';
+	    this.scope = {};
+	    this.template = _homeComponentHtml2['default'];
+	    this.controller = _homeController2['default'];
+	    this.controllerAs = 'vm';
+	    this.bindToController = true;
+	  }
+	
+	  _createClass(HomeComponent, [{
+	    key: 'link',
+	    value: function link(scope, element) {
+	      // console.log(this)
+	      //  this.scope = scope;
+	      //  this.element = element;
+	      scope.vm.getUserInfo();
+	      // scope.$on('data_ready', () => this.createVisualization());
+	      // scope.$on('$destroy', () => {
+	      //   if (this.svg) {
+	      //     this.svg = null;
+	      //   }
+	      // });
+	      // scope.vm.requestData();
+	      // scope.vm.requestRandomData(3);
+	    }
+	  }]);
+	
+	  return HomeComponent;
+	})();
+	
+	exports['default'] = HomeComponent;
 	module.exports = exports['default'];
 
 /***/ },
 /* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "<div style=\"background-color:red\">{{ vm.name }}</div>\r\n<div class=\"card\">\r\n\t<div class=\"item item-divider\">\r\n\t\tI'm a Header in a Card!\r\n\t</div>\r\n\t<div class=\"item item-text-wrap\">\r\n\t\tThis is a basic Card with some text.\r\n\t</div>\r\n\t<div class=\"item item-divider\">\r\n\t\tI'm a Footer in a Card!\r\n\t</div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.index\" style=\"text-decoration: none\">              \r\n\t\t\t我的主页\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.prospect\" style=\"text-decoration: none\">          \r\n\t\t\t展业\r\n\t\t</a>\r\n\t</div>\r\n</div>\r\n<div class=\"row\">\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.message\" style=\"text-decoration: none\">\r\n\t\t\t消息\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.profit\" style=\"text-decoration: none\"> \r\n\t\t\t赚钱\r\n\t\t</a>\r\n\t</div>\r\n</div>"
+	module.exports = "<div style=\"background-color:red\">{{ vm.name }}</div>\r\n<div class=\"card\">\r\n\t<div class=\"item item-divider\">\r\n\t\tI'm a Header in a Card!\r\n\t</div>\r\n\t<div class=\"item item-text-wrap\">\r\n\t\tThis is a basic Card with some text.\r\n\t\t{{vm.userInfo | json }}\r\n\t</div>\r\n\t<div class=\"item item-divider\">\r\n\t\tI'm a Footer in a Card!\r\n\t</div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.index\" style=\"text-decoration: none\">              \r\n\t\t\t我的主页\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.prospect\" style=\"text-decoration: none\">          \r\n\t\t\t展业\r\n\t\t</a>\r\n\t</div>\r\n</div>\r\n<div class=\"row\">\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.message\" style=\"text-decoration: none\">\r\n\t\t\t消息\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.profit\" style=\"text-decoration: none\"> \r\n\t\t\t赚钱\r\n\t\t</a>\r\n\t</div>\r\n</div>"
 
 /***/ },
 /* 11 */
@@ -100700,25 +100728,37 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
 	var HomeController = (function () {
-	  function HomeController(factory) {
+	  function HomeController($scope, $http) {
 	    _classCallCheck(this, HomeController);
 	
 	    this.name = 'home';
 	    this.test = 'mytest';
-	    this.init();
+	    this.$scope = $scope;
+	    this.$http = $http;
+	    // this.init();
+	    // this.factory = factory;
 	  }
 	
+	  //  init(){
+	  // //code
+	
+	  //  }
+	
 	  _createClass(HomeController, [{
-	    key: 'init',
-	    value: function init() {
-	      //code
+	    key: 'getUserInfo',
+	    value: function getUserInfo() {
+	      var _this = this;
+	
+	      this.$http.get('http://localhost:3000/api/sales/info/1').then(function (response) {
+	        _this.userInfo = response.data;
+	      });
 	    }
 	  }]);
 	
 	  return HomeController;
 	})();
 	
-	exports['default'] = ['home.factory', HomeController];
+	exports['default'] = HomeController;
 	module.exports = exports['default'];
 
 /***/ },
