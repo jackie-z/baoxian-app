@@ -1,33 +1,40 @@
-<div style="background-color:red">{{ vm.name }}</div>
-<div class="card">
-	<div class="item item-divider">
-		I'm a Header in a Card!
+<div class="row" style="height:25%">
+	225
+</div>
+<div class="row" style="height:9%">
+	<div style="width:33%">
+	24
 	</div>
-	<div class="item item-text-wrap">
-		This is a basic Card with some text.
-		{{vm.userInfo | json }}
+	<div style="width:67%;color:white">
+		<span style="font-size:4.5em">2469</span><span style="font-size:1.6em">分</span>
 	</div>
-	<div class="item item-divider">
-		I'm a Footer in a Card!
+	
+</div>
+</div>
+<div class="row" style="height:16%;color:white">
+	<div style="width:40%">
+	
+	</div>
+	<div style="width:60%">
+	<span style="font-size:1.4em">资深理财师</span>
+	</div>
+	
+</div>
+<div class="row" style="height:8%;color:white">
+	<div style="width:70%">
+	
+	</div>
+	<div style="width:30%">
+	<span style="font-size:1em">我的客户：700</span>
 	</div>
 </div>
-
-<div class="row">
-	<div class="col" >
-		<a ui-sref="app.index" style="text-decoration: none">              
-			我的主页
-		</a>
-	</div>
+<div class="row" style="height:15%">
+	324
+</div>
+<div class="row" style="height:21%">
 	<div class="col" >
 		<a ui-sref="app.prospect" style="text-decoration: none">          
 			展业
-		</a>
-	</div>
-</div>
-<div class="row">
-	<div class="col" >
-		<a ui-sref="app.message" style="text-decoration: none">
-			消息
 		</a>
 	</div>
 	<div class="col" >
@@ -35,4 +42,11 @@
 			赚钱
 		</a>
 	</div>
+	<div class="col" >
+		<a ui-sref="app.message" style="text-decoration: none">
+			消息
+		</a>
+		
+	</div>
 </div>
+<div style="text-align:center;height:8%;background-color:grey">{{vm.userInfo | json }}</div>
