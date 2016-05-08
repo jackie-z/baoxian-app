@@ -18,13 +18,22 @@ let settingModule = angular.module('setting', [
       url: '/setting',
       views: {
 	      'menuContent': {
-	        templateUrl: `${config.pathHtml}setting/setting.html`
+	        templateUrl: `${config.pathHtml}setting/setting.html`,
+          controller:'setting'
 		    }
 	    }
     });
 })
 
 .directive('settingView', settingComponent)
-.factory('setting.factory', settingFactory); 
+.factory('setting.factory', settingFactory)
+.controller('setting', ['$scope', '$ionicHistory',
+  function($scope, $ionicHistory){
+    $scope.back = () => {
+      console.log('goBack');
+      console.log($ionicHistory);
+      window.history.back()
+    }
+  }]);
 
 export default settingModule;

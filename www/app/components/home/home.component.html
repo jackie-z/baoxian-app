@@ -1,14 +1,18 @@
-<div class="row" style="height:25%">
-	225
+<div class="row" style="height:5%">
+</div>
+<div class="row" style="height:20%">
+	<div style="width:5%">
+	24
+	</div>
+	<img src="./img/u11.png" menu-toggle="left" style="width:3em;height:3em">
 </div>
 <div class="row" style="height:9%">
 	<div style="width:33%">
 	24
 	</div>
 	<div style="width:67%;color:white">
-		<span style="font-size:4.5em">2469</span><span style="font-size:1.6em">分</span>
-	</div>
-	
+		<span style="font-size:4.5em">{{vm.userInfo.point}}</span><span style="font-size:1.6em">分</span>
+	</div>	
 </div>
 </div>
 <div class="row" style="height:16%;color:white">
@@ -17,36 +21,28 @@
 	</div>
 	<div style="width:60%">
 	<span style="font-size:1.4em">资深理财师</span>
-	</div>
-	
+	</div>	
 </div>
 <div class="row" style="height:8%;color:white">
 	<div style="width:70%">
 	
 	</div>
 	<div style="width:30%">
-	<span style="font-size:1em">我的客户：700</span>
+	<span style="font-size:1em">我的客户：{{vm.userInfo.client_count}}</span>
 	</div>
 </div>
 <div class="row" style="height:15%">
 	324
 </div>
-<div class="row" style="height:21%">
-	<div class="col" >
-		<a ui-sref="app.prospect" style="text-decoration: none">          
-			展业
-		</a>
-	</div>
-	<div class="col" >
-		<a ui-sref="app.profit" style="text-decoration: none"> 
-			赚钱
-		</a>
-	</div>
-	<div class="col" >
-		<a ui-sref="app.message" style="text-decoration: none">
-			消息
-		</a>
-		
-	</div>
+<div class="row" style="height:21%">	
+	<a class="col" ui-sref="app.prospect" style="text-decoration: none;height:100%">   	
+	</a>
+	<a class="col" ui-sref="app.profit" style="text-decoration: none;height:100%">   	
+	</a>
+	<a class="col" ui-sref="app.message" style="text-decoration: none;height:100%">   	
+	</a>
 </div>
-<div style="text-align:center;height:8%;background-color:grey">{{vm.userInfo | json }}</div>
+<div class="row" style="height:1%;background-color:#ddd">
+	324
+</div>
+<div class="row" style="height:5%;background-color:grey">{{vm.userInfo | json }}</div>
