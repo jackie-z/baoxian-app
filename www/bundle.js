@@ -100711,7 +100711,7 @@
 /* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "<div style=\"background-color:red\">{{ vm.name }}</div>\r\n<div class=\"card\">\r\n\t<div class=\"item item-divider\">\r\n\t\tI'm a Header in a Card!\r\n\t</div>\r\n\t<div class=\"item item-text-wrap\">\r\n\t\tThis is a basic Card with some text.\r\n\t\t{{vm.userInfo | json }}\r\n\t</div>\r\n\t<div class=\"item item-divider\">\r\n\t\tI'm a Footer in a Card!\r\n\t</div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.index\" style=\"text-decoration: none\">              \r\n\t\t\t我的主页\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.prospect\" style=\"text-decoration: none\">          \r\n\t\t\t展业\r\n\t\t</a>\r\n\t</div>\r\n</div>\r\n<div class=\"row\">\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.message\" style=\"text-decoration: none\">\r\n\t\t\t消息\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"col\" >\r\n\t\t<a ui-sref=\"app.profit\" style=\"text-decoration: none\"> \r\n\t\t\t赚钱\r\n\t\t</a>\r\n\t</div>\r\n</div>"
+	module.exports = "<div class=\"row\" style=\"height:5%\">\r\n</div>\r\n<div class=\"row\" style=\"height:20%\">\r\n\t<div style=\"width:5%\">\r\n\t24\r\n\t</div>\r\n\t<img src=\"./img/u11.png\" menu-toggle=\"left\" style=\"width:3em;height:3em\">\r\n</div>\r\n<div class=\"row\" style=\"height:9%\">\r\n\t<div style=\"width:33%\">\r\n\t24\r\n\t</div>\r\n\t<div style=\"width:67%;color:white\">\r\n\t\t<span style=\"font-size:4.5em\">{{vm.userInfo.point}}</span><span style=\"font-size:1.6em\">分</span>\r\n\t</div>\t\r\n</div>\r\n</div>\r\n<div class=\"row\" style=\"height:16%;color:white\">\r\n\t<div style=\"width:40%\">\r\n\t\r\n\t</div>\r\n\t<div style=\"width:60%\">\r\n\t<span style=\"font-size:1.4em\">资深理财师</span>\r\n\t</div>\t\r\n</div>\r\n<div class=\"row\" style=\"height:8%;color:white\">\r\n\t<div style=\"width:70%\">\r\n\t\r\n\t</div>\r\n\t<div style=\"width:30%\">\r\n\t<span style=\"font-size:1em\">我的客户：{{vm.userInfo.client_count}}</span>\r\n\t</div>\r\n</div>\r\n<div class=\"row\" style=\"height:15%\">\r\n\t324\r\n</div>\r\n<div class=\"row\" style=\"height:21%\">\t\r\n\t<a class=\"col\" ui-sref=\"app.prospect\" style=\"text-decoration: none;height:100%\">   \t\r\n\t</a>\r\n\t<a class=\"col\" ui-sref=\"app.profit\" style=\"text-decoration: none;height:100%\">   \t\r\n\t</a>\r\n\t<a class=\"col\" ui-sref=\"app.message\" style=\"text-decoration: none;height:100%\">   \t\r\n\t</a>\r\n</div>\r\n<div class=\"row\" style=\"height:1%;background-color:#ddd\">\r\n\t324\r\n</div>\r\n<div class=\"row\" style=\"height:5%;background-color:grey\">{{vm.userInfo | json }}</div>"
 
 /***/ },
 /* 11 */
@@ -101070,11 +101070,36 @@
 	    url: '/study',
 	    views: {
 	      'menuContent': {
-	        templateUrl: _config2['default'].pathHtml + 'study/study.html'
+	        templateUrl: _config2['default'].pathHtml + 'study/study.html',
+	        controller: 'study'
 	      }
 	    }
 	  });
-	}]).directive('studyView', _studyComponent2['default']).factory('study.factory', _studyFactory2['default']);
+	}]).directive('studyView', _studyComponent2['default']).factory('study.factory', _studyFactory2['default']).controller('study', ['$scope', function ($scope) {
+	  $scope.active_content = 'orders';
+	  $scope.queries = [{
+	    id: 1,
+	    title: '到底为啥买保险 寿险精英掏心',
+	    time: '2分钟前',
+	    pic: './img/u37.png'
+	  }, {
+	    id: 2,
+	    title: '到底为啥买保险 寿险精英掏心',
+	    time: '2分钟前',
+	    pic: './img/u37.png'
+	  }, {
+	    id: 3,
+	    title: '到底为啥买保险 寿险精英掏心',
+	    time: '2分钟前',
+	    pic: './img/u37.png'
+	  }];
+	  $scope.headOne = $scope.queries[0];
+	  $scope.setActiveContent = function (value) {
+	    console.log(value);
+	    $scope.active_content = value;
+	  };
+	  console.log($scope);
+	}]);
 	
 	exports['default'] = studyModule;
 	module.exports = exports['default'];
@@ -101809,11 +101834,18 @@
 	    url: '/setting',
 	    views: {
 	      'menuContent': {
-	        templateUrl: _config2['default'].pathHtml + 'setting/setting.html'
+	        templateUrl: _config2['default'].pathHtml + 'setting/setting.html',
+	        controller: 'setting'
 	      }
 	    }
 	  });
-	}]).directive('settingView', _settingComponent2['default']).factory('setting.factory', _settingFactory2['default']);
+	}]).directive('settingView', _settingComponent2['default']).factory('setting.factory', _settingFactory2['default']).controller('setting', ['$scope', '$ionicHistory', function ($scope, $ionicHistory) {
+	  $scope.back = function () {
+	    console.log('goBack');
+	    console.log($ionicHistory);
+	    window.history.back();
+	  };
+	}]);
 	
 	exports['default'] = settingModule;
 	module.exports = exports['default'];

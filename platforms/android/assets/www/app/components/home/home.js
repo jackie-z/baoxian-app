@@ -1,7 +1,7 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import Resource from 'angular-resource';
-import homeComponent from './home.component';
+import HomeComponent from './home.component';
 import homeFactory from './home.factory';
 import config from '../../config';
 
@@ -24,7 +24,7 @@ let homeModule = angular.module('home', [
     });
 })
 
-.directive('home', homeComponent)
+.directive('home', () => new HomeComponent)
 .factory('home.factory', homeFactory); 
 
 export default homeModule;

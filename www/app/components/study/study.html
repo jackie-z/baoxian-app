@@ -1,13 +1,37 @@
-<ion-view title="学习">
+<ion-view title="学习" class="view-tabs-top">
 	<ion-nav-bar class="bar-stable">
-      <ion-nav-buttons side="left">
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
-        </button>
-      </ion-nav-buttons>
     </ion-nav-bar>
-	<ion-content has-header="true" padding="true">
-		<study-view></study-view>
+    <div class="tabs tabs-top tabs-striped">
+	　　<a href class="tab-item"
+	　　　　　　ng-class="{active: active_content=='orders'}" 	　　　　　　
+	　　　　 > 
+	　　　　<button ng-click="setActiveContent('orders')">设备消息 </button>
+	　　</a>
+	　　<a href class="tab-item " 
+	　　　　　　ng-class="{active: active_content=='deliveries'}" 
+	　　　　　　ng-click="setActiveContent('deliveries')"
+	　　　　　　> 
+	<button ng-click="setActiveContent('deliveries')">系统消息 </button>
+	　　　　　　
+	　　</a> 
+	</div> 
+	
+    <ion-content padding="true" class="has-subheader" ng-show="active_content=='orders'"> 
+    	<div >
+    	<img ng-src="{{headOne.pic}}" style="width:100%">
+    	<span style=" border:1px solid green;color:green">NEW</span><span>{{headOne.title}}</span>
+    	</div> 
+    	<p>a</p>
+    	<ion-list>
+	      <ion-item class="item-avatar" ng-repeat="query in queries" type="item-text-wrap" href="">
+	        <img ng-src="{{query.pic}}">
+	        <h2>{{query.title}}</h2>
+	        <p>{{query.time}}</p>
+	      </ion-item>
+	    </ion-list>
 	</ion-content>
+
+	<ion-content padding="true" class="has-subheader" ng-show="active_content=='deliveries'"> 系统消息</ion-content>
 	<div class="tabs tabs-icon-only">
 		<a nav-clear class="tab-item disable-user-behavior active" title="Home" nav-clear ui-sref="app.home">
 			<i class="icon ion-home"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>
