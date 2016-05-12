@@ -31,7 +31,12 @@
 	    </ion-list>
 	</ion-content>
 
-	<ion-content padding="true" class="has-subheader" ng-show="active_content=='deliveries'"> 系统消息</ion-content>
+	<ion-content padding="true" class="has-subheader" ng-show="active_content=='deliveries'"> 系统消息
+<md-button>Click me!</md-button>
+		<md-button md-no-ink class="md-primary">Primary (md-noink)</md-button>
+		<md-button class="md-raised">Button</md-button>
+		<md-button class="md-raised md-primary">Primary</md-button>
+</ion-content>
 	<div class="tabs tabs-icon-only">
 		<a nav-clear class="tab-item disable-user-behavior active" title="Home" nav-clear ui-sref="app.home">
 			<i class="icon ion-home"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>

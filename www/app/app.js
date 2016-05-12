@@ -2,6 +2,7 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import 'ionic-sdk/release/js/ionic.bundle';
 import Components from './components/components';
+import ngMaterial from 'angular-material';
 
 // Ionic Starter App
 //import start from './controllers';
@@ -9,7 +10,7 @@ import Components from './components/components';
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', Components.name])
+angular.module('app', ['ionic', 'ngMaterial', Components.name])
 
 .run(($ionicPlatform) => {
   
