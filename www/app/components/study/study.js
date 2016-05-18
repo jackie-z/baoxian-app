@@ -14,10 +14,10 @@ let studyModule = angular.module('study', [
   "ngInject";
 
   $stateProvider
-    .state('app.study', {
+    .state('app.tabs.study', {
       url: '/study',
       views: {
-	      'menuContent': {
+	      'tabStudy': {
 	        templateUrl: `${config.pathHtml}study/study.html`,
           controller: 'study'
 		    }

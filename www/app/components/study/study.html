@@ -1,23 +1,10 @@
 <ion-view title="学习" class="view-tabs-top">
 	<ion-nav-bar class="bar-stable">
     </ion-nav-bar>
-    <div class="tabs tabs-top tabs-striped">
-	　　<a href class="tab-item"
-	　　　　　　ng-class="{active: active_content=='orders'}" 	　　　　　　
-	　　　　 > 
-	　　　　<button ng-click="setActiveContent('orders')">设备消息 </button>
-	　　</a>
-	　　<a href class="tab-item " 
-	　　　　　　ng-class="{active: active_content=='deliveries'}" 
-	　　　　　　ng-click="setActiveContent('deliveries')"
-	　　　　　　> 
-	<button ng-click="setActiveContent('deliveries')">系统消息 </button>
-	　　　　　　
-	　　</a> 
-	</div> 
-	
-    <ion-content padding="true" class="has-subheader" ng-show="active_content=='orders'"> 
-    	<div >
+    <ion-content padding="true"> 
+    <md-tabs md-dynamic-height md-stretch-tabs md-border-bottom>
+      <md-tab label="咨询">
+        <div >
     	<img ng-src="{{headOne.pic}}" style="width:100%">
     	<span style=" border:1px solid green;color:green">NEW</span><span>{{headOne.title}}</span>
     	</div> 
@@ -29,14 +16,31 @@
 	        <p>{{query.time}}</p>
 	      </ion-item>
 	    </ion-list>
+      </md-tab>
+      <md-tab label="专题">
+        <md-content class="md-padding">
+          <video width="320" height="240" controls autobuffer>
+            <source src="./video/test.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>      
+        </md-content>
+      </md-tab>
+      <md-tab label="思维">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Tab Three</h1>
+          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+        </md-content>
+      </md-tab>
+      <md-tab label="视频">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Tab Three</h1>
+          <p>Integer turpis erat</p>
+        </md-content>
+      </md-tab>
+    </md-tabs>  	
 	</ion-content>
 
-	<ion-content padding="true" class="has-subheader" ng-show="active_content=='deliveries'"> 系统消息
-<md-button>Click me!</md-button>
-		<md-button md-no-ink class="md-primary">Primary (md-noink)</md-button>
-		<md-button class="md-raised">Button</md-button>
-		<md-button class="md-raised md-primary">Primary</md-button>
-</ion-content>
+	
 	<div class="tabs tabs-icon-only">
 		<a nav-clear class="tab-item disable-user-behavior active" title="Home" nav-clear ui-sref="app.home">
 			<i class="icon ion-home"></i><span class="tab-title ng-binding" ng-bind-html="title"></span>

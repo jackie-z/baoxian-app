@@ -37,5 +37,5 @@ angular.module('app', ['ionic', 'ngMaterial', Components.name])
   $ionicConfigProvider.platform.android.navBar.alignTitle('left');
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/home');
+  $urlRouterProvider.otherwise('/app/tabs/home');
 });

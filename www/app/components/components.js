@@ -8,8 +8,9 @@ import Prospect from './prospect/prospect';
 import Message from './message/message';
 import Profit from './profit/profit';
 import Setting from './setting/setting';
+import Tabs from './tabs/tabs';
 
-
+console.log(Tabs.name);
 
 let componentModule = angular.module('app.components', [
   Menu.name,
@@ -20,7 +21,8 @@ let componentModule = angular.module('app.components', [
   Prospect.name,
   Message.name,
   Profit.name,
-  Setting.name
+  Setting.name,
+  Tabs.name
 ]);
 
 export default componentModule;

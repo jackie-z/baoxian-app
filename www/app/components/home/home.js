@@ -14,10 +14,10 @@ let homeModule = angular.module('home', [
   "ngInject";
 
   $stateProvider
-    .state('app.home', {
+    .state('app.tabs.home', {
       url: '/home',
       views: {
-	      'menuContent': {
+	      'tabHome': {
 	        templateUrl: `${config.pathHtml}home/home.html`
 		    }
 	    }

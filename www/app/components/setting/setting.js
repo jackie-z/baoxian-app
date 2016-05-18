@@ -32,7 +32,7 @@ let settingModule = angular.module('setting', [
     $scope.back = () => {
       console.log('goBack');
       console.log($ionicHistory);
-      window.history.back()
+      window.history.back();
     }
   }]);
 
